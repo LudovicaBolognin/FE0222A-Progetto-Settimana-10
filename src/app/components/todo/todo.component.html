@@ -1,0 +1,24 @@
+<!-- <p>todo works!</p> -->
+<div class="container mt-5">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-4">
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Scrivi Task da Inserire" aria-label="Scrivi Task da Inserire" aria-describedby="button-addon2" [(ngModel)]="newTodo">
+        <button class="btn btn-outline-secondary" type="button" id="button-addon2" (click)="saveTodo()">Inserisci</button>
+      </div>
+      <h3 class="text-center display-6">Lista di cose da fare:</h3>
+      <ng-container *ngIf="!todos.length || todos === []"><div class="container m-auto mt-3"><div class="alert alert-dark" role="alert">{{messaggio}}</div></div></ng-container>
+      <table class="table table-striped">
+        <tbody>
+          <ng-container *ngFor="let todo of todos; let i = index">
+            <tr *ngIf="todo.completed == false">
+              <th scope="row">{{i+1}}</th>
+              <td>{{todo.title}}</td>
+              <td><button class="btn btn-outline-secondary float-end" type="button" id="button-addon2" (click)="removeTodo(todo, i)">Fatto!</button></td>
+            </tr>
+          </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
