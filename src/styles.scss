@@ -1,2 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/scss/bootstrap';
+table button {
+  background: rgb(166,220,255);
+  background: linear-gradient(0deg, rgba(166,220,255,0.8830882694874825) 66%, rgba(112,167,196,1) 100%);
+  box-shadow: 2px 3px 3px 1px rgb(13, 43, 60);
+  border-radius: 10px;
+}
+
