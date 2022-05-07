@@ -12,7 +12,7 @@
         <tbody>
           <ng-container *ngFor="let todo of todos; let i = index">
             <tr *ngIf="todo.completed == false">
-              <th scope="row">{{i+1}}</th>
+              <th scope="row"><!-- {{i+1}} -->* ˚ ✦ </th>
               <td>{{todo.title}}</td>
               <td><button class="btn btn-outline-secondary float-end" type="button" id="button-addon2" (click)="removeTodo(todo, i)">Fatto!</button></td>
             </tr>

@@ -49,6 +49,7 @@ removeTodo(ele: Todo, id: number) {
   });
   if(!this.todos.length || this.todos === []) {
     this.noTasks();
+    //c'è un bug quando si passa dalla pagina completati alla pagina to do: il messaggio "Non ci sono Task non compare" o se c'è ancora un elemento nell'array todos, il messaggio copre il nuovo elemento inserito che però esiste e viene correttamente inserito nell'array. Se si ripassa da completati a todo, il nuovo elemento inserito viene mostrato
   }
 };
 
